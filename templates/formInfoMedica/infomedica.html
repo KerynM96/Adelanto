@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="es">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="keywords" content="Get in Touch​">
+  <meta name="description" content="">
+  <title>Información Médica</title>
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icons/favicon.ico') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/nicepage.css') }}" media="screen">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/caracterizacion.css') }}" media="screen">
+  <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}"
+    defer=""></script>
+  <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/nicepage.js') }}"
+    defer=""></script>
+  <meta name="generator" content="Nicepage 6.11.6, nicepage.com">
+  <meta name="referrer" content="origin">
+  <link id="u-theme-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+  <link id="u-page-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+
+
+
+
+  <script type="application/ld+json">{
+		"@context": "",
+		"@type": "Organization",
+		"name": "",
+		"logo": "images/M-logo.png"
+    }</script>
+  <meta name="theme-color" content="#478ac9">
+  <meta property="og:title" content="caracterizacion">
+  <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/">
+
+  <!--===============================================================================================-->
+  <script src="{{ url_for('static', filename='vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/popper.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.min.js') }} "></script>
+  <!--===============================================================================================-->
+  <script src="{{ url_for('static', filename='vendor/select2/select2.min.js') }}"></script>
+  <!--===============================================================================================-->
+  <script src="{{ url_for('static', filename='vendor/tilt/tilt.jquery.min.js') }}"></script>
+  <script>
+    $('.js-tilt').tilt({
+      scale: 1.1
+    });
+
+    function restartProcess() {
+      localStorage.clear();
+      window.location.replace('caracterizacion');
+    }
+  </script>
+  <!--===============================================================================================-->
+
+</head>
+
+<body data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="es">
+  <header class="u-clearfix u-header u-header" id="sec-556b">
+    <div class="u-clearfix u-sheet u-sheet-1 container">
+      <div class="Logo">
+        <a href="#" class="u-image u-logo u-image-1">
+          <img src="{{ url_for('static', filename='images/M-logo.png') }}" class="u-logo-image u-logo-image-1">
+        </a>
+      </div>
+      <div class="Titulo1"> <b>Fundación Mahuampi Venezuela </b><br/> Migrantes Venezolanos / Colombianos Retorna </div> 
+    </div>
+  </header>
+  <section class="u-clearfix u-section-1" id="sec-b5bf">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <h2 class="u-text u-text-default u-text-1">Información Médica</h2>
+      <div class="u-form u-form-1">
+        <form id="formInfoMedica" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px;">
+
+          <div class="u-form-group u-form-name u-form-partition-factor-2 u-form-group-1">
+            <label for="discapacidad" class="u-label">* Discapacidad</label>
+            <select class="u-input u-input-rectangle" id="discapacidad" name="discapacidad" required>
+                <option value="" disabled selected hidden>Seleccione una opción</option>
+                <option value="si">Si</option>
+                <option value="no">No</option> 
+            </select>
+          </div>
+
+          <div class="u-form-group u-form-name u-form-partition-factor-2 u-form-group-1">
+            <label id="descDiscapacidadLabel" for="descDiscapacidad" class="u-label">* Descripción de Discapacidad</label>
+            <input type="text" placeholder="Describa la discapacidad" id="descDiscapacidad" name="descDiscapacidad"
+              class="u-input u-input-rectangle" required="">
+          </div>
+
+          <div class="u-form-group u-form-name u-form-partition-factor-2 u-form-group-1">
+            <label for="condicion" class="u-label">* Tiene Condición Médica</label>
+            <select class="u-input u-input-rectangle" id="condicion" name="condicion" required>
+                <option value="" disabled selected hidden>Seleccione una opción</option>
+                <option value="si">Si</option>
+                <option value="no">No</option> 
+            </select>
+          </div>
+
+          <div class="u-form-group u-form-name u-form-partition-factor-2 u-form-group-1">
+            <label id="descCondicionLabel" for="descCondicion" class="u-label">* Descripción de la Condición</label>
+            <input type="text" placeholder="Describa la condición médica" id="descCondicion" name="descCondicion"
+              class="u-input u-input-rectangle" required="">
+          </div>
+
+          <div id="btnRegistrar" class="u-align-left u-form-group u-form-submit" style="margin-top: 50px;">
+            <a href="#" class="u-black u-border-none u-btn u-btn-submit u-button-style u-btn-2">Registrar</a>
+            <input type="submit" value="submit" class="u-form-control-hidden">
+          </div>
+          
+          <div id="nextInfoFamiliares" class="u-align-left" style="margin-top: 50px; display: none;">
+            <a class="u-black u-border-none u-btn u-btn-submit u-button-style u-btn-2" onclick="window.location.replace('familiares')">Siguiente</a>
+          </div>
+
+          <div id="finalizar" class="u-align-left" style="margin-top: 50px; display: none;">
+            <a class="u-black u-border-none u-btn u-btn-submit u-button-style u-btn-2" onclick="restartProcess()">Finalizar</a>
+          </div>
+
+          <div class="u-form-send-success" style="display: none;">
+            Los datos de medicos fueron registrados satisfactoriamente.
+          </div>
+          
+          <div class="u-form-send-error" style="display: none;">
+            Ocurrio un error al registrar los datos. Por favor intentelo nuevamente.
+          </div>
+          
+          <input type="hidden" value="" name="recaptchaResponse">
+          <input type="hidden" name="formServices" value="87cdc356-e729-12d3-c6df-624ba3a6a417">
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="{{ url_for('static', filename='js/infomedica_controller.js') }}"></script>
+</body>
+
+</html>

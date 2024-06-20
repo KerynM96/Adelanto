@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="es">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="keywords" content="Get in Touch​">
+  <meta name="description" content="">
+  <title>Datos Personales</title>
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icons/favicon.ico') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/nicepage.css') }}" media="screen">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/caracterizacion.css') }}" media="screen">
+  <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}"
+    defer=""></script>
+  <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/nicepage.js') }}"
+    defer=""></script>
+  <meta name="generator" content="Nicepage 6.11.6, nicepage.com">
+  <meta name="referrer" content="origin">
+  <link id="u-theme-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+  <link id="u-page-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+
+
+
+
+  <script type="application/ld+json">{
+		"@context": "",
+		"@type": "Organization",
+		"name": "",
+		"logo": "images/M-logo.png"
+    }</script>
+  <meta name="theme-color" content="#478ac9">
+  <meta property="og:title" content="caracterizacion">
+  <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/">
+
+  <!--===============================================================================================-->
+  <script src="{{ url_for('static', filename='vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/popper.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.min.js') }} "></script>
+  <!--===============================================================================================-->
+  <script src="{{ url_for('static', filename='vendor/select2/select2.min.js') }}"></script>
+  <!--===============================================================================================-->
+  <script src="{{ url_for('static', filename='vendor/tilt/tilt.jquery.min.js') }}"></script>
+  <script>
+    $('.js-tilt').tilt({
+      scale: 1.1
+    });
+  </script>
+  <!--===============================================================================================-->
+
+</head>
+
+<body data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="es">
+  <header class="u-clearfix u-header u-header" id="sec-556b">
+    <div class="u-clearfix u-sheet u-sheet-1 container">
+      <div class="Logo">
+        <a href="#" class="u-image u-logo u-image-1">
+          <img src="{{ url_for('static', filename='images/originalogo.png') }}" class="u-logo-image u-logo-image-1">
+        </a>
+      </div>
+      <div class="Titulo1"> <b>Fundación Mahuampi Venezuela </b><br/> Migrantes Venezolanos / Colombianos Retorna </div> 
+    </div>
+  </header>
+  <section class="u-clearfix u-section-1" id="sec-b5bf">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <h2 class="u-text u-text-default u-text-1">Información Personal</h2>
+      <div class="u-form u-form-1">
+        <form id="formDatosPersonales" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px;">
+
+          <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+            <label for="dirRes" class="u-label">* Dirección de residencia</label>
+            <input type="text" placeholder="Ingresge la dirección de residencia" id="dirRes" name="dirRes"
+              class="u-input u-input-rectangle" required="">
+          </div>
+
+          <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+            <label for="barrio" class="u-label">* Barrio</label>
+            <input type="text" placeholder="Ingresge el barrio" id="barrio" name="barrio"
+              class="u-input u-input-rectangle" required="">
+          </div>
+
+          <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+            <label for="localidad" class="u-label">* Localidad</label>
+            <input type="text" placeholder="Ingresge la localidad" id="localidad" name="localidad"
+              class="u-input u-input-rectangle" required="">
+          </div>
+
+          <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+            <label for="email" class="u-label">* Correo Electrónico</label>
+            <input type="text" placeholder="Ingresge la dirección de residencia" id="email" name="email"
+              class="u-input u-input-rectangle" required="">
+          </div>
+
+          <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+            <label for="telPrin" class="u-label">* Teléfono Principal</label>
+            <input class="u-input u-input-rectangle" type="number" id="telPrin" name="telPrin" maxlength="10" placeholder="Ingrese teléfono principal" autofocus required/>
+          </div>
+
+          <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+            <label for="telSec" class="u-label">* Teléfono Secundario</label>
+            <input class="u-input u-input-rectangle" type="number" id="telSec" name="telSec" maxlength="10" placeholder="Ingrese teléfono secundario" autofocus required/>
+          </div>
+
+          <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+            <label for="trabajo" class="u-label">* Trabaja Actualmente</label>
+            <select class="u-input u-input-rectangle" id="trabajo" name="trabajo" required>
+                <option value="" disabled selected hidden>Seleccione una opción</option>
+                <option value="si">Si</option>
+                <option value="no">No</option> 
+            </select>
+          </div>
+
+          <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+            <label for="cuartoDoc" class="u-label">* Cuarto Documento</label>
+            <select class="u-input u-input-rectangle" id="cuartoDoc" name="cuartoDoc" required>
+                <option value="" disabled selected hidden>Seleccione tipo de documento</option>
+                <option value="salvocondunto">Salvocondunto</option>
+                <option value="no">No tiene otro documento</option>
+            </select>
+          </div>
+
+          <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+            <label id="numCuartoDocLabel" for="numCuartoDoc" class="u-label">* Número de documento</label>
+            <input class="u-input u-input-rectangle" type="number" id="numCuartoDoc" name="numCuartoDoc" maxlength="10" placeholder="Ingrese número de documento" autofocus required/>
+          </div>
+
+          <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+            <label for="instruccion" class="u-label">* Grado de Instrucción</label>
+            <select class="u-input u-input-rectangle" id="instruccion" name="instruccion" required>
+                <option value="" disabled selected hidden>Seleccione un grado</option>
+                <option value="primaria">Primaria</option>
+                <option value="bachiller">Bachiller</option>
+                <option value="tecnico">Tecnico Superior Universitario</option>
+                <option value="universitario">Universitario</option>
+                <option value="maestria">Maestría</option>
+                <option value="no">No tiene</option>
+            </select>
+          </div>
+          
+          <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+            <label id="areaLabel" for="area" class="u-label">* Area de Instrucción</label>
+            <input type="text" placeholder="Ingresge el area de instrucción" id="area" name="area"
+              class="u-input u-input-rectangle" required>
+          </div>
+
+          <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+            <label for="estadoMig" class="u-label">* Estado Migratorio</label>
+            <select class="u-input u-input-rectangle" id="estadoMig" name="estadoMig" required>
+                <option value="" disabled selected hidden>Seleccione un estado</option>
+                <option value="regularizado">Regularizado</option>
+                <option value="sin_regularizar">Sin Regularizar</option>
+            </select>
+          </div>
+
+          <div class="u-form-group u-form-name u-form-partition-factor-1 u-form-group-1">
+            <label for="cargaFam" class="u-label">* Carga Familiar</label>
+            <input class="u-input u-input-rectangle" style="width: 30%;" type="number" id="cargaFam" name="cargaFam" placeholder="Personas a cargo" autofocus required/>
+          </div>
+
+          <div id="btnRegistrar" class="u-align-left u-form-submit" style="margin-top: 50px;">
+            <a href="#" class="u-black u-border-none u-btn u-btn-submit u-button-style u-btn-2">Registrar</a>
+            <input type="submit" value="submit" class="u-form-control-hidden">
+          </div>
+
+          <div id="nextInfoMedica" class="u-align-left" style="margin-top: 50px; display: none;">
+            <a class="u-black u-border-none u-btn u-btn-submit u-button-style u-btn-2" onclick="window.location.replace('infomedica')">Siguiente</a>
+          </div>
+          
+          <div class="u-form-send-success" style="display: none;">
+            Los datos de personales fueron registrados satisfactoriamente.
+          </div>
+          
+          <div class="u-form-send-error" style="display: none;">
+            Ocurrio un error al registrar los datos. Por favor intentelo nuevamente.
+          </div>
+          
+          <input type="hidden" value="" name="recaptchaResponse">
+          <input type="hidden" name="formServices" value="87cdc356-e729-12d3-c6df-624ba3a6a417">
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="{{ url_for('static', filename='js/infopersonal_controller.js') }}"></script>
+</body>
+
+</html>

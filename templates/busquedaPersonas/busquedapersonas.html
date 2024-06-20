@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="es">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Get in Touch​">
+    <meta name="description" content="">
+    <title>Búsqueda</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icons/favicon.ico') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nicepage.css') }}" media="screen">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/caracterizacion.css') }}" media="screen">
+    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}"
+        defer=""></script>
+    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/nicepage.js') }}"
+        defer=""></script>
+    <meta name="generator" content="Nicepage 6.11.6, nicepage.com">
+    <meta name="referrer" content="origin">
+    <link id="u-theme-google-font" rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+
+
+
+
+    <script type="application/ld+json">{
+		"@context": "",
+		"@type": "Organization",
+		"name": "",
+		"logo": "images/M-logo.png"
+    }</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="caracterizacion">
+    <meta property="og:type" content="website">
+    <meta data-intl-tel-input-cdn-path="intlTelInput/">
+
+    <!--===============================================================================================-->
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/popper.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.min.js') }} "></script>
+    <!--===============================================================================================-->
+    <script src="{{ url_for('static', filename='vendor/select2/select2.min.js') }}"></script>
+    <!--===============================================================================================-->
+    <script src="{{ url_for('static', filename='vendor/tilt/tilt.jquery.min.js') }}"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        });
+    </script>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="es">
+    <header class="u-clearfix u-header u-header" id="sec-556b">
+        <div class="u-clearfix u-sheet u-sheet-1 container">
+            <div class="Logo">
+                <a href="#" class="u-image u-logo u-image-1">
+                    <img src="{{ url_for('static', filename='images/M-logo.png') }}"
+                        class="u-logo-image u-logo-image-1">
+                </a>
+            </div>
+            <div class="Titulo1"> <b>Fundación Mahuampi Venezuela </b><br /> Migrantes Venezolanos / Colombianos Retorna
+            </div>
+            <div class="Menu">
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a class="nav_inactive" onclick="window.location.replace('caracterizacion')"><i
+                                    class="fa-solid fa-user-plus"></i> Registro de Beneficiarios</a></li>
+                        <li><a class="nav_active"><i class="fa-solid fa-magnifying-glass"></i> Búsqueda de
+                                Beneficiarios</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="u-clearfix u-section-1" id="sec-b5bf">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <h2 class="u-text u-text-default u-text-1">Búsqueda de beneficiarios</h2>
+            <div class="u-form u-form-1">
+                <form id="formBusqueda" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form"
+                    style="padding: 10px;">
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+                        <label for="numDoc" class="u-label">* Número de documento</label>
+                        <input class="u-input u-input-rectangle" type="number" id="numDoc" name="numDoc" maxlength="10"
+                            placeholder="Ingrese número de documento" autofocus required />
+                    </div>
+
+                    <div id="btnRegistrar"
+                        class="u-form-group u-form-name u-form-partition-factor-2 u-form-group-1 u-form-submit"
+                        style="margin-top: 50px;">
+                        <a href="#" class="u-black u-border-none u-btn u-btn-submit u-button-style u-btn-2">Buscar</a>
+                        <input type="submit" value="submit" class="u-form-control-hidden">
+                    </div>
+
+                    <input type="hidden" value="" name="recaptchaResponse">
+                    <input type="hidden" name="formServices" value="87cdc356-e729-12d3-c6df-624ba3a6a417">
+
+                    <div id="loadingContainer" class="u-form-partition-factor-1">
+                        <lable>Buscando el beneficiario...</lable>
+                        <div class="overlay"></div>
+                    </div>
+                </form>
+
+                <div id="noResultContainer" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px; display: none;">
+                    <div class="u-form-group u-form-name u-form-partition-factor-1 u-form-group-1">
+                        <h4>No se encontraron resultados</h4>
+                    </div>
+                </div>
+                
+
+                <div id="resultContainer" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px; display: none;">
+                    <div class="titulo_resultado u-form-group u-form-name u-form-partition-factor-1 u-form-group-1">
+                        <h3>Resultado de la búsqueda</h3>
+                        <hr class="separador" />
+                    </div>
+                    
+                    <!-- DATOS DEL BENEFICIARIO -->
+                    <div class="u-form-group u-form-name u-form-partition-factor-1 u-form-group-1">
+                        <h4>Datos de Registro</h4>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+                        <label for="tipoDoc" class="u-label">Tipo de documento: </label>
+                        <label class="u-label datoBusqueda" id="tipoDoc" name="tipoDoc"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+                        <label for="num_Doc" class="u-label">Número de documento: </label>
+                        <label class="u-label datoBusqueda" id="num_Doc"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+                        <label for="vigDoc" class="u-label">Vigencia Documento de Identidad: </label>
+                        <label id="vigDoc" name="vigDoc" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+                        <label for="name" class="u-label">Nombres:</label>
+                        <label id="name" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-2">
+                        <label for="lastName" class="u-label">Apellidos: </label>
+                        <label id="lastName" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-2">
+                        <label for="edad" class="u-label">Edad: </label>
+                        <label id="edad" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-5 u-form-group-2">
+                        <label for="fecNac" class="u-label">Fecha de Nacimiento: </label>
+                        <label id="fecNac" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-5 u-form-group-1">
+                        <label for="sexo" class="u-label">Sexo: </label>
+                        <label id="sexo" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-5 u-form-group-1">
+                        <label for="pasaporte" class="u-label">Pasaporte: </label>
+                        <label id="pasaporte" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-5 u-form-group-1">
+                        <label for="vigPasaporte" class="u-label">Vigencia del Pasaporte: </label>
+                        <label id="vigPasaporte" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-5 u-form-group-1">
+                        <label for="numPasaporte" class="u-label">Número de pasaporte: </label>
+                        <label id="numPasaporte" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <!-- Otros documentos -->
+                    <div class="u-form-group u-form-name u-form-partition-factor-2 u-form-group-1">
+                        <h5 class="u-align-left u-text u-text-1">Segundo Documento</h5>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-2 u-form-group-1">
+                        <h5 class="u-align-left u-text u-text-1">Tercer Documento</h5>
+                    </div>
+                    <br /><br />
+                    <div class="u-form-group u-form-name u-form-partition-factor-4 u-form-group-1">
+                        <label for="segDoc" class="u-label">Tipo del documento: </label>
+                        <label id="segDoc" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-4 u-form-group-1">
+                        <label for="numSegDoc" class="u-label">Número de documento: </label>
+                        <label id="numSegDoc" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-4 u-form-group-1">
+                        <label for="terDoc" class="u-label">Tipo del documento: </label>
+                        <label id="terDoc" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-4 u-form-group-1">
+                        <label for="numTerDoc" class="u-label">Número de documento: </label>
+                        <label id="numTerDoc" class="u-label datoBusqueda"></label>
+                    </div>
+                    <!-- Otros documentos -->
+
+                    <div class="titulo_resultado u-form-group u-form-name u-form-partition-factor-1 u-form-group-1">
+                        <hr class="separador" />
+                    </div>
+                    <!-- DATOS DEL BENEFICIARIO -->
+
+                    <!-- DATOS PERSONALES -->
+                    <div class="u-form-group u-form-name u-form-partition-factor-1 u-form-group-1">
+                        <h4>Datos Personales</h4>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+                        <label for="dirRes" class="u-label">Dirección de residencia: </label>
+                        <label id="dirRes" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+                        <label for="barrio" class="u-label">Barrio: </label>
+                        <label id="barrio" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+                        <label for="localidad" class="u-label">Localidad: </label>
+                        <label id="localidad" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+                        <label for="email" class="u-label">Correo Electrónico: </label>
+                        <label id="email" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+                        <label for="telPrin" class="u-label">Teléfono Principal: </label>
+                        <label id="telPrin" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+                        <label for="telSec" class="u-label">Teléfono Secundario: </label>
+                        <label id="telSec" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+                        <label for="trabajo" class="u-label">Trabaja Actualmente: </label>
+                        <label id="trabajo" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+                        <label for="cuartoDoc" class="u-label">Cuarto Documento: </label>
+                        <label id="cuartoDoc" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+                        <label for="numCuartoDoc" class="u-label">Número de documento: </label>
+                        <label id="numCuartoDoc" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+                        <label for="instruccion" class="u-label">Grado de Instrucción: </label>
+                        <label id="instruccion" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+                        <label for="area" class="u-label">Area de Instrucción</label>
+                        <label id="area" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-3 u-form-group-1">
+                        <label for="estadoMig" class="u-label">Estado Migratorio: </label>
+                        <label id="estadoMig" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-1 u-form-group-1">
+                        <label for="cargaFam" class="u-label">Carga Familiar: </label>
+                        <label id="cargaFam" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="titulo_resultado u-form-group u-form-name u-form-partition-factor-1 u-form-group-1">
+                        <hr class="separador" />
+                    </div>
+                    <!-- DATOS PERSONALES -->
+
+                    <!-- INFORMACION MEDICA -->
+                    <div class="u-form-group u-form-name u-form-partition-factor-1 u-form-group-1">
+                        <h4>Datos Médicos</h4>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-2 u-form-group-1">
+                        <label for="discapacidad" class="u-label">Discapacidad: </label>
+                        <label id="discapacidad" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-2 u-form-group-1">
+                        <label for="descDiscapacidad" class="u-label">Descripción de Discapacidad: </label>
+                        <label id="descDiscapacidad" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-2 u-form-group-1">
+                        <label for="condicion" class="u-label">Tiene Condición Médica: </label>
+                        <label id="condicion" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="u-form-group u-form-name u-form-partition-factor-2 u-form-group-1">
+                        <label for="descCondicion" class="u-label">Descripción de la Condición: </label>
+                        <label id="descCondicion" class="u-label datoBusqueda"></label>
+                    </div>
+
+                    <div class="titulo_resultado u-form-group u-form-name u-form-partition-factor-1 u-form-group-1">
+                        <hr class="separador" />
+                    </div>
+                    <!-- INFORMACION MEDICA -->
+
+                    <!-- PERSONAS A CARGO -->
+                    <div id="cargaFamTitulo" class="u-form-group u-form-name u-form-partition-factor-1 u-form-group-1" style="display: none;">
+                        <h4>Personas a Cargo</h4>
+                    </div>
+
+                    <div id="familiares" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px;"></div>
+                    <!-- PERSONAS A CARGO -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/busqueda_controller.js') }}"></script>
+</body>
+
+</html>
